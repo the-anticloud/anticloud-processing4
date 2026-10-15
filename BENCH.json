@@ -540,10 +540,10 @@
  "version": "1.0.0",
  "source": {
   "git": {
-   "head": "f480ef6ee34b9b7178b7f21f4f1a52cf49475642",
-   "url": "https://github.com/processing/processing",
-   "branch": "master",
-   "sha_verified_from": "GitHub API commits/master | unified 2026-10-14 (API-exists + content/clone anchor)"
+   "url": "https://github.com/benfry/processing4",
+   "head": "6a2cf8cda35552c62a1a794bb1e20f43fe8ffcda",
+   "sha_verified_from": "revendor 2026-10-15: GitHub API commit lookup",
+   "previous_substitute": "https://github.com/processing/processing"
   }
  },
  "license": "NOASSERTION",

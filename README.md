@@ -1,33 +1,26 @@
 # PROCESSING4
 
-> [!NOTE] **Processing 5.0 development is underway on `main`.** - **New features and 5.0 work:** Open pull requests against `main`. - **Bug fixes for Processing 4:** Open pull requests against the [`4.x`](https://github.com/processing/processing4/tree/4.x) branch. Not sure which branch to use? Ask in the issue thread or on [Discord](https://discord.processing.org) in #devs-chat.
+> This repository contains the source code for the [Processing](https://processing.org/) project for people who want to help improve the code.
 
-**Category:** ARTIST_TOOLS · **Ecosystem:** python · **Vendored upstream:** https://github.com/processing/processing · **Pinned commit:** `f480ef6ee34b9b7178b7f21f4f1a52cf49475642` · **Vendor:** Anticloud FZ LLE
-
-> **Note:** this package vendors `https://github.com/processing/processing` as the implementation for the `PROCESSING4` slot. The vendored repository name differs from the package name; the pin above is the exact commit vendored here.
+**Category:** ARTIST_TOOLS · **Ecosystem:** python · **Vendored upstream:** https://github.com/benfry/processing4 · **Pinned commit:** `6a2cf8cda35552c62a1a794bb1e20f43fe8ffcda` · **Vendor:** Anticloud FZ LLE
 
 ## What This Project Is
 
-[!NOTE] **Processing 5.0 development is underway on `main`.** - **New features and 5.0 work:** Open pull requests against `main`. - **Bug fixes for Processing 4:** Open pull requests against the [`4.x`](https://github.com/processing/processing4/tree/4.x) branch. Not sure which branch to use? Ask in the issue thread or on [Discord](https://discord.processing.org) in #devs-chat.
+This repository contains the source code for the [Processing](https://processing.org/) project for people who want to help improve the code.
 
 This is the upstream project, vendored at the pinned commit above and packaged offline-first. The 12 improvements Anticloud adds live in `anticloud/` and are described under *Anticloud Overlay* below. Every fact in this file traces to a file in this directory.
 
 ## Installation
 
-Building Processing locally on your machine will let you troubleshoot and make sure your contributions work as intended before submitting them to this repository. It also gives you the flexibility to experiment and learn more about how Processing is structured.
+[Instructions on how to build the code](https://github.com/processing/processing4/blob/master/build/README.md) are found in a README inside the `build` folder.
 
-For a quick start:
-1. Fork and clone the repository
-1. Open it in IntelliJ IDEA
-1. Wait for Gradle to sync
-1. Next to the run Button, select the `Processing` Configuration
-1. Hit Run
+We've also moved to a new repository for this release so that we could cull a lot of the accumulated mess of the last 20 years, which makes `git clone` (and most other `git` operations) a lot faster.
 
-For more information and detailed instructions, follow our [How to Build Processing](BUILD.md) guide.
+The work on 4.0 was done by a [tiny number of people](https://github.com/processing/processing4/graphs/contributors?from=2019-10-01&to=2022-08-09&type=c) who continue working on it, unpaid, because they care about it. Please help!
 
 ## Usage
 
-If you're interested in *using* Processing, head over to the [download page](https://processing.org/download), or read more about the project on the [Processing website](https://processing.org/). There are also several [tutorials](https://processing.org/tutorials) that provide a helpful introduction. They are complemented by hundreds of examples that are included with the software itself.
+See the upstream README (linked above) for usage. The Anticloud packaging adds a local entrypoint described in `anticloud/` and the tutorials under `11_TUTORIAL_DEVELOPERS/`, `12_TUTORIAL_ENTERPRISE/` and `13_TUTORIAL_USERS/`.
 
 ## Anticloud Overlay
 
@@ -69,7 +62,7 @@ The upstream licence is preserved in `LICENSE` and `THIRD_PARTY_LICENSES/`. The 
 SHA3-256 of `BENCH.json`:
 
 ```
-5d78bd2532365f41a1d79e342ba3e80663ebba4ad42d0d872dc8087dac17f15d
+0c51235ad51387d1d2e695f70c72a4183976da810372c43c94bb3d5c5838aa17
 ```
 
 Recompute the hash above and compare — any drift means the package has been tampered with and the seal is invalid. This is a self-assessment; no external audit has been performed and a SOC 2 / NIST independent audit is committed post-funding.
