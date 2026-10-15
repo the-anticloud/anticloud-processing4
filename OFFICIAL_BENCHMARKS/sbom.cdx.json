@@ -1,0 +1,38 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:f3497e2d-42c4-5e87-8332-3307a928f778",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-06T07:42:54Z",
+    "component": {
+      "type": "application",
+      "name": "PROCESSING4",
+      "version": "be0ee8266e07",
+      "bom-ref": "pkg:generic/anticloud/PROCESSING4@be0ee8266e07",
+      "purl": "pkg:generic/anticloud/PROCESSING4@be0ee8266e07",
+      "licenses": [
+        {
+          "license": {
+            "id": "LGPL-2.1"
+          }
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "anticloud:source-commit",
+        "value": "be0ee8266e07857f65937ec0a033707b9f6a286b"
+      },
+      {
+        "name": "anticloud:source-url",
+        "value": "https://github.com/processing/processing4"
+      },
+      {
+        "name": "anticloud:tier",
+        "value": "tier-agent"
+      }
+    ]
+  },
+  "components": []
+}

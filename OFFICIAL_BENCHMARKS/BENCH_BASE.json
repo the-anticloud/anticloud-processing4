@@ -1,0 +1,662 @@
+{
+  "schema": "anticloud.tier-bench/1",
+  "project": "PROCESSING4",
+  "source": {
+    "repo_path": "E:\\fenta\\Downloads\\The Anticloud\\ANTICLOUD_REPOS\\ARTIST_TOOLS\\PROCESSING4\\UPSTREAM_CLONE",
+    "git": {
+      "head": "be0ee8266e07857f65937ec0a033707b9f6a286b",
+      "url": "https://github.com/processing/processing4",
+      "branch": "main",
+      "committed_at": "2026-09-25T15:05:11-04:00"
+    }
+  },
+  "metrics": {
+    "files_total": 550,
+    "source_files_scanned": 296,
+    "lines_of_code": 177598,
+    "languages": {
+      ".java": 254,
+      ".kt": 38,
+      ".properties": 29,
+      ".jar": 27,
+      "(none)": 23,
+      ".png": 21,
+      ".svg": 21,
+      ".md": 20,
+      ".kts": 17,
+      ".glsl": 17,
+      ".txt": 15,
+      ".yml": 13,
+      ".xml": 11,
+      ".a": 9,
+      ".g4": 6
+    }
+  },
+  "licence": {
+    "spdx": "LGPL-2.1",
+    "class": "B",
+    "source_file": "LICENSE.md",
+    "redistribution_allowed": false
+  },
+  "dependencies": {
+    "count": 0,
+    "unique": 0,
+    "by_ecosystem": {},
+    "list": []
+  },
+  "owasp_top10": {
+    "total_findings": 266,
+    "files_with_findings": 188,
+    "severity": {
+      "high": 13,
+      "medium": 2,
+      "low": 251
+    },
+    "categories": {
+      "A01-BrokenAccessControl": {
+        "count": 0,
+        "findings": []
+      },
+      "A02-CryptographicFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A03-Injection": {
+        "count": 14,
+        "findings": [
+          {
+            "severity": "high",
+            "file": "app/src/processing/app/Base.java",
+            "line": 1825,
+            "cwe": "CWE-95",
+            "snippet": "//Runtime.getRuntime().exec(app.getAbsolutePath());"
+          },
+          {
+            "severity": "high",
+            "file": "app/src/processing/app/Platform.java",
+            "line": 510,
+            "cwe": "CWE-95",
+            "snippet": "//        Runtime.getRuntime().exec(cmd.toArray(new String[0]));"
+          },
+          {
+            "severity": "high",
+            "file": "app/src/processing/app/Util.java",
+            "line": 349,
+            "cwe": "CWE-95",
+            "snippet": "process = Runtime.getRuntime().exec(new String[] {"
+          },
+          {
+            "severity": "high",
+            "file": "app/src/processing/app/exec/ProcessHelper.java",
+            "line": 82,
+            "cwe": "CWE-95",
+            "snippet": "//    final Process process = Runtime.getRuntime().exec(cmd);"
+          },
+          {
+            "severity": "high",
+            "file": "app/src/processing/app/platform/LinuxPlatform.java",
+            "line": 101,
+            "cwe": "CWE-95",
+            "snippet": "Runtime.getRuntime().exec(new String[] { launcher, url });"
+          },
+          {
+            "severity": "high",
+            "file": "app/src/processing/app/platform/MacPlatform.java",
+            "line": 52,
+            "cwe": "CWE-95",
+            "snippet": "Runtime.getRuntime().exec(cmdarray);"
+          },
+          {
+            "severity": "high",
+            "file": "app/src/processing/app/tools/InstallCommander.java",
+            "line": 157,
+            "cwe": "CWE-95",
+            "snippet": "PApplet.exec(new String[] { \"mv\", sourcePath, targetPath });"
+          },
+          {
+            "severity": "medium",
+            "file": "app/src/processing/app/ui/Editor.java",
+            "line": 2880,
+            "cwe": "CWE-89",
+            "snippet": "String.format(\"padding: %d %d %d %d; \", m, m*2, m, m*2) +"
+          },
+          {
+            "severity": "high",
+            "file": "app/utils/src/main/java/processing/utils/Settings.java",
+            "line": 80,
+            "cwe": "CWE-95",
+            "snippet": "var process = Runtime.getRuntime().exec(\r\n                        new String[]{"
+          },
+          {
+            "severity": "high",
+            "file": "core/src/processing/core/PApplet.java",
+            "line": 3115,
+            "cwe": "CWE-95",
+            "snippet": "* <b>exec(String[])</b> function is a shortcut for"
+          },
+          {
+            "severity": "high",
+            "file": "java/libraries/io/src/native/impl.c",
+            "line": 392,
+            "cwe": "CWE-120",
+            "snippet": "sprintf(path, \"/sys/class/gpio/gpio%d/value\", gpio);"
+          },
+          {
+            "severity": "high",
+            "file": "java/libraries/pdf/src/processing/pdf/PGraphicsPDF.java",
+            "line": 283,
+            "cwe": "CWE-95",
+            "snippet": "Runtime.getRuntime().exec(new String[] {"
+          },
+          {
+            "severity": "high",
+            "file": "java/src/processing/mode/java/JavaBuild.java",
+            "line": 1065,
+            "cwe": "CWE-95",
+            "snippet": "Runtime.getRuntime().exec(new String[] { \"chmod\", \"+x\", shellPath });"
+          },
+          {
+            "severity": "high",
+            "file": "java/src/processing/mode/java/runner/Runner.java",
+            "line": 541,
+            "cwe": "CWE-95",
+            "snippet": "process = PApplet.exec(args);"
+          }
+        ]
+      },
+      "A04-InsecureDesign": {
+        "count": 89,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "app/ant/processing/app/Messages.java",
+            "line": 85,
+            "cwe": "CWE-",
+            "snippet": "// TODO All these messages need to be handled differently for"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/Base.java",
+            "line": 114,
+            "cwe": "CWE-",
+            "snippet": "// TODO can these be Set objects, or are they expected to be in order?"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/Console.java",
+            "line": 73,
+            "cwe": "CWE-",
+            "snippet": "// TODO fix this dreadful style choice in how the Console is initialized"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/Library.java",
+            "line": 571,
+            "cwe": "CWE-",
+            "snippet": "// TODO a little odd because ContributionType.LIBRARY.isCandidate()"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/Messages.kt",
+            "line": 99,
+            "cwe": "CWE-",
+            "snippet": "// TODO All these messages need to be handled differently for"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/Platform.java",
+            "line": 55,
+            "cwe": "CWE-",
+            "snippet": "// TODO only used in one place, probably overkill for this to be a map"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/Preferences.kt",
+            "line": 39,
+            "cwe": "CWE-",
+            "snippet": "TODO(\"Not yet implemented\")"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/Sketch.java",
+            "line": 352,
+            "cwe": "CWE-",
+            "snippet": "// TODO maybe just pop up a text area?"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/SketchCode.java",
+            "line": 243,
+            "cwe": "CWE-",
+            "snippet": "// TODO these could probably be handled better, since it's a general state"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/Util.java",
+            "line": 353,
+            "cwe": "CWE-",
+            "snippet": "// TODO implement version that uses XCOPY here on Windows"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/api/Contributions.kt",
+            "line": 49,
+            "cwe": "CWE-",
+            "snippet": "// TODO: Decouple modes listing from `Base` class, defaulting to Java mode for now"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/api/Sketchbook.kt",
+            "line": 33,
+            "cwe": "CWE-",
+            "snippet": "// TODO: Allow the user to change the sketchbook location"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/laf/PdeComboBoxUI.java",
+            "line": 67,
+            "cwe": "CWE-",
+            "snippet": "// TODO There must be a less convoluted way to do this [fry 220505]"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/laf/SwingUtilities2.java",
+            "line": 50,
+            "cwe": "CWE-",
+            "snippet": "* Hacked up from the source of sun.swing.SwingUtilities2."
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/platform/DefaultPlatform.java",
+            "line": 213,
+            "cwe": "CWE-",
+            "snippet": "// TODO this should be openLink(), as in PApplet, but need to look"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/platform/LinuxPlatform.java",
+            "line": 45,
+            "cwe": "CWE-",
+            "snippet": "// For Java 17, this hack requires an addition to the command line:"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/platform/MacPlatform.java",
+            "line": 83,
+            "cwe": "CWE-",
+            "snippet": "// TODO not yet implemented"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/platform/WindowsPlatform.java",
+            "line": 504,
+            "cwe": "CWE-",
+            "snippet": "//    int FOF_NO_CONNECTED_ELEMENTS = 0x2000; // don't operate on connected elements (\"xxx_files\" folders that go with .htm files)"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/syntax/JEditTextArea.java",
+            "line": 137,
+            "cwe": "CWE-",
+            "snippet": "// what a dreadful hack to get the scrollbar to align"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/syntax/PdeTextAreaPainter.java",
+            "line": 131,
+            "cwe": "CWE-",
+            "snippet": "// TODO This line is causing NPEs randomly ever since I added the"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/syntax/TextAreaPainter.java",
+            "line": 382,
+            "cwe": "CWE-",
+            "snippet": "x += fontMetrics.charWidth(currentLine.array[currentLine.offset + i]);  // TODO why this char?"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/syntax/TokenMarkerState.java",
+            "line": 110,
+            "cwe": "CWE-",
+            "snippet": "* This is a foul hack. It stops nextLineRequested"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/ui/Editor.java",
+            "line": 198,
+            "cwe": "CWE-",
+            "snippet": "// TODO call handleActivated(null)? or do we run the risk of the"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/ui/ExamplesFrame.java",
+            "line": 366,
+            "cwe": "CWE-",
+            "snippet": "// TODO there has to be a simpler way of handling this"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/ui/FindReplace.java",
+            "line": 199,
+            "cwe": "CWE-",
+            "snippet": "// hack to get first field to focus properly on macOS"
+          }
+        ]
+      },
+      "A05-SecurityMisconfiguration": {
+        "count": 0,
+        "findings": []
+      },
+      "A06-VulnerableComponents": {
+        "count": 0,
+        "findings": []
+      },
+      "A07-AuthFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A08-SoftwareDataIntegrity": {
+        "count": 162,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "app/ant/processing/app/Messages.java",
+            "line": 4,
+            "cwe": "CWE-319",
+            "snippet": "Part of the Processing project - http://processing.org"
+          },
+          {
+            "severity": "low",
+            "file": "app/ant/processing/app/ui/WebFrame.java",
+            "line": 4,
+            "cwe": "CWE-319",
+            "snippet": "Part of the Processing project - http://processing.org"
+          },
+          {
+            "severity": "low",
+            "file": "app/ant/processing/app/ui/Welcome.java",
+            "line": 4,
+            "cwe": "CWE-319",
+            "snippet": "Part of the Processing project - http://processing.org"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/Base.java",
+            "line": 4,
+            "cwe": "CWE-319",
+            "snippet": "Part of the Processing project - http://processing.org"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/Console.java",
+            "line": 4,
+            "cwe": "CWE-319",
+            "snippet": "Part of the Processing project - http://processing.org"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/Formatter.java",
+            "line": 4,
+            "cwe": "CWE-319",
+            "snippet": "Part of the Processing project - http://processing.org"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/Language.java",
+            "line": 4,
+            "cwe": "CWE-319",
+            "snippet": "Part of the Processing project - http://processing.org"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/Messages.kt",
+            "line": 2,
+            "cwe": "CWE-319",
+            "snippet": "Part of the Processing project - http://processing.org"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/Mode.java",
+            "line": 4,
+            "cwe": "CWE-319",
+            "snippet": "Part of the Processing project - http://processing.org"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/Platform.java",
+            "line": 4,
+            "cwe": "CWE-319",
+            "snippet": "Part of the Processing project - http://processing.org"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/Preferences.java",
+            "line": 4,
+            "cwe": "CWE-319",
+            "snippet": "Part of the Processing project - http://processing.org"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/Problem.java",
+            "line": 4,
+            "cwe": "CWE-319",
+            "snippet": "Part of the Processing project - http://processing.org"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/ReferenceServer.java",
+            "line": 92,
+            "cwe": "CWE-319",
+            "snippet": "return \"http://localhost:\" + port + \"/\";"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/RunnerListener.java",
+            "line": 4,
+            "cwe": "CWE-319",
+            "snippet": "Part of the Processing project - http://processing.org"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/Settings.java",
+            "line": 4,
+            "cwe": "CWE-319",
+            "snippet": "Part of the Processing project - http://processing.org"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/SingleInstance.java",
+            "line": 4,
+            "cwe": "CWE-319",
+            "snippet": "Part of the Processing project - http://processing.org"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/Sketch.java",
+            "line": 4,
+            "cwe": "CWE-319",
+            "snippet": "Part of the Processing project - http://processing.org"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/SketchCode.java",
+            "line": 5,
+            "cwe": "CWE-319",
+            "snippet": "Part of the Processing project - http://processing.org"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/UpdateCheck.java",
+            "line": 4,
+            "cwe": "CWE-319",
+            "snippet": "Part of the Processing project - http://processing.org"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/Util.java",
+            "line": 4,
+            "cwe": "CWE-319",
+            "snippet": "Part of the Processing project - http://processing.org"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/exec/ProcessHelper.java",
+            "line": 3,
+            "cwe": "CWE-319",
+            "snippet": "Part of the Processing project - http://processing.org"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/exec/SystemOutSiphon.java",
+            "line": 4,
+            "cwe": "CWE-319",
+            "snippet": "Part of the Processing project - http://processing.org"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/platform/DefaultPlatform.java",
+            "line": 4,
+            "cwe": "CWE-319",
+            "snippet": "Part of the Processing project - http://processing.org"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/platform/LinuxPlatform.java",
+            "line": 4,
+            "cwe": "CWE-319",
+            "snippet": "Part of the Processing project - http://processing.org"
+          },
+          {
+            "severity": "low",
+            "file": "app/src/processing/app/platform/MacPlatform.java",
+            "line": 4,
+            "cwe": "CWE-319",
+            "snippet": "Part of the Processing project - http://processing.org"
+          }
+        ]
+      },
+      "A09-LoggingMonitoringFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A10-SSRF": {
+        "count": 1,
+        "findings": [
+          {
+            "severity": "medium",
+            "file": "utils/contributors-png.js",
+            "line": 21,
+            "cwe": "CWE-918",
+            "snippet": "const res = await fetch(url);"
+          }
+        ]
+      }
+    }
+  },
+  "owasp_llm_top10": {
+    "total_findings": 2,
+    "files_with_findings": 2,
+    "severity": {
+      "high": 0,
+      "medium": 2,
+      "low": 0
+    },
+    "categories": {
+      "LLM01-PromptInjection": {
+        "count": 2,
+        "findings": [
+          {
+            "severity": "medium",
+            "file": "app/src/processing/app/Mode.java",
+            "line": 213,
+            "cwe": "CWE-1336",
+            "snippet": "File templateFolder = checkSketchbookTemplate();"
+          },
+          {
+            "severity": "medium",
+            "file": "java/libraries/pdf/src/processing/pdf/PGraphicsPDF.java",
+            "line": 143,
+            "cwe": "CWE-1336",
+            "snippet": "//        template = content.createTemplate(width, height);"
+          }
+        ]
+      },
+      "LLM02-SensitiveInfoDisclosure": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM03-SupplyChain": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM04-DataPoisoning": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM05-ImproperOutputHandling": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM06-ExcessiveAgency": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM07-SystemPromptLeak": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM08-VectorEmbeddingWeaknesses": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM09-Misinformation": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM10-UnboundedConsumption": {
+        "count": 0,
+        "findings": []
+      }
+    }
+  },
+  "sbom": {
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.5",
+    "serialNumber": "urn:uuid:f3497e2d-42c4-5e87-8332-3307a928f778",
+    "version": 1,
+    "metadata": {
+      "timestamp": "2026-10-05T14:41:07Z",
+      "component": {
+        "type": "application",
+        "name": "PROCESSING4",
+        "version": "be0ee8266e07",
+        "bom-ref": "pkg:generic/anticloud/PROCESSING4@be0ee8266e07",
+        "purl": "pkg:generic/anticloud/PROCESSING4@be0ee8266e07",
+        "licenses": [
+          {
+            "license": {
+              "id": "LGPL-2.1"
+            }
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "anticloud:source-commit",
+          "value": "be0ee8266e07857f65937ec0a033707b9f6a286b"
+        },
+        {
+          "name": "anticloud:source-url",
+          "value": "https://github.com/processing/processing4"
+        },
+        {
+          "name": "anticloud:tier",
+          "value": "tier-agent"
+        }
+      ]
+    },
+    "components": []
+  },
+  "elapsed_seconds": 238.17
+}
