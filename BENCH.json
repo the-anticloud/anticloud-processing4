@@ -543,7 +543,7 @@
    "url": "https://github.com/benfry/processing4",
    "head": "6a2cf8cda35552c62a1a794bb1e20f43fe8ffcda",
    "sha_verified_from": "revendor 2026-10-15: GitHub API commit lookup",
-   "previous_substitute": "https://github.com/processing/processing"
+   "previous_substitute": "https://github.com/benfry/processing4"
   }
  },
  "license": "NOASSERTION",
